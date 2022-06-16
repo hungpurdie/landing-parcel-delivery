@@ -1,14 +1,31 @@
 :root {
-  --primary: #145ff0;
-  --white: #fff;
+  --primary-color: #145ff0;
+  --secondary-color: #cccccc;
 
-  --text-primary: #06183d;
-  --text-secondary: #60646d;
+  --white-color: #fff;
+  --black-color: #000;
 
-  --background-primary: #fff3f0;
-  --background-secondary: #fa8d74;
+  --primary-text: #06183d;
+  --secondary-text: #60646d;
 
-  --font-family: 'ProximaNova', sans-serif;
+  --primary-background: #fff3f0;
+  --secondary-background: #fa8d74;
+
+  --font-family: 'Poppins', sans-serif;
+
+  --border-radius-btn: 4px;
+
+  --large-width-btn: 150px;
+  --large-height-btn: 56px;
+
+  --medium-width-btn: 107px;
+  --medium-height-btn: 35px;
+
+  --header-height: 968px;
+  --footer-height: 60px;
+
+  --nav-width: 60px;
+  --content-width: 1440px;
 }
 
 * {
@@ -56,29 +73,4 @@ input,
 a {
   color: var(--text-color);
   text-decoration: none;
-}
-
-// Fonts embedded
-@font-face {
-  font-family: ProximaNova;
-  src: url('/assets/fonts/Proxima-Nova-Regular.woff2');
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: ProximaNova;
-  src: url('/assets/fonts/ProximaNova-Semibold.woff2');
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: ProximaNova;
-  src: url('/assets/fonts/Proxima-Nova-Bold.woff');
-  font-weight: 700;
-}
-
-@font-face {
-  font-family: SofiaPro;
-  src: url('/assets/fonts/sofiapro-bold.woff');
-  font-weight: 700;
 }

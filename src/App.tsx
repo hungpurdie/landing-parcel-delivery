@@ -1,18 +1,14 @@
-import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from '~/pages/Home';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className='App'>
-      <header className='App-header'>
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type='button' onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
