@@ -1,0 +1,74 @@
+@import '../../../styles/mixins';
+
+.wrapper {
+  background: var(--primary-text);
+  color: var(--white-color);
+}
+
+.inner {
+  margin: 0 15px;
+  padding: 1rem 0;
+  @include mdMinBreakPoint {
+    max-width: #{$md};
+    margin: 0 auto;
+  }
+  @include lgMinBreakPoint {
+    max-width: #{$lg};
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  @include xlMinBreakPoint {
+    max-width: #{$xl};
+  }
+}
+
+.left {
+  width: 243px;
+  .logo {
+    margin: 0;
+    position: relative;
+    &:after {
+      content: '';
+      display: inline-block;
+      margin-left: 5px;
+      position: absolute;
+      top: 50%;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--primary-color);
+    }
+  }
+
+  .socials {
+    margin-top: 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+    @include lgMinBreakPoint {
+      width: 70%;
+    }
+  }
+}
+
+.right {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 10px;
+
+  @include lgMinBreakPoint {
+    margin-top: 0;
+  }
+
+  .links {
+    &-list {
+      margin-top: 10px;
+      list-style-type: none;
+      width: 50%;
+    }
+    li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}

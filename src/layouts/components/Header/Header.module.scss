@@ -1,37 +1,27 @@
 @import '../../../styles/mixins';
 
 .wrapper {
-  display: flex;
-  padding: 0 10px;
   background: linear-gradient(180deg, #fef8f7 92.26%, #ffffff 106.27%);
-  @include mdMinBreakPoint {
-    align-items: center;
-    justify-content: center;
-  }
-
-  @include lgMinBreakPoint {
-    padding: 0 50px;
-  }
-  @include xxlMinBreakPoint {
-    padding: 0 150px;
-  }
 }
 
 .inner {
-  width: 100%;
+  margin: 0 15px;
+  @include mdMinBreakPoint {
+    max-width: #{$md};
+    margin: 0 auto;
+  }
+  @include lgMinBreakPoint {
+    max-width: #{$lg};
+  }
   @include xlMinBreakPoint {
-    height: var(--header-height);
+    max-width: #{$xl};
   }
 }
 
 .nav-top {
+  padding: 1rem 0;
   display: flex;
   justify-content: space-between;
-  height: var(--nav-width);
-  margin: 10px 0;
-  @include mdMinBreakPoint {
-    margin: 40px 0;
-  }
 
   .logo-link {
     min-width: 92px;
@@ -90,7 +80,6 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    padding: 0 15px;
     @include xlMinBreakPoint {
       align-items: center;
       flex-direction: row;
