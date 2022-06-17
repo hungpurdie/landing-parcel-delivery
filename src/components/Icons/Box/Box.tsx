@@ -1,8 +1,12 @@
-export default function Box() {
+interface BoxProps {
+  width?: number;
+  height?: number;
+}
+export default function Box({ width, height }: BoxProps) {
   return (
     <svg
-      width='38'
-      height='38'
+      width={width || 38}
+      height={height || 38}
       viewBox='0 0 38 38'
       fill='currentColor'
       xmlns='http://www.w3.org/2000/svg'

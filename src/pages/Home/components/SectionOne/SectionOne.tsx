@@ -41,6 +41,7 @@ export default function SectionOne() {
                 description={card.description}
                 icon={card.icon}
                 background={card.background}
+                size='large'
               />
             </li>
           ))}

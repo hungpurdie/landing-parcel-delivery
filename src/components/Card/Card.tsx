@@ -8,10 +8,17 @@ interface CardProps {
   description: string;
   icon: React.ReactNode;
   background?: string;
+  size?: 'small' | 'large';
+  shape?: 'circle' | 'square';
 }
-export default function Card({ title, description, icon, background }: CardProps) {
+export default function Card({ title, description, icon, background, size, shape }: CardProps) {
+  const classes = cx('wrapper', {
+    [size || 'small']: size,
+    [shape || 'square']: shape,
+  });
+
   return (
-    <div className={cx('wrapper')}>
+    <div className={classes}>
       <div
         className={cx('icon')}
         style={{

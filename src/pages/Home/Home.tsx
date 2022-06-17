@@ -1,5 +1,6 @@
 import MainLayout from '~/layouts/MainLayout/MainLayout';
 import SectionOne from '~/pages/Home/components/SectionOne';
+import SectionThree from '~/pages/Home/components/SectionThree';
 import SectionTwo from '~/pages/Home/components/SectionTwo';
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <MainLayout>
       <SectionOne />
       <SectionTwo />
+      <SectionThree />
     </MainLayout>
   );
 }

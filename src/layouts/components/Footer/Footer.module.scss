@@ -7,12 +7,14 @@
 
 .inner {
   margin: 0 15px;
-  padding: 8rem 0;
+  padding: 100px 20px;
   @include mdMinBreakPoint {
     max-width: #{$md};
     margin: 0 auto;
   }
   @include lgMinBreakPoint {
+    padding-left: 0;
+    padding-right: 0;
     max-width: #{$lg};
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -68,6 +70,9 @@
     }
     li:not(:last-child) {
       margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 10px;
     }
   }
 }

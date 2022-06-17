@@ -10,6 +10,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
+  padding: 0 20px;
 
   @include mdMinBreakPoint {
     max-width: #{$md};
@@ -17,6 +18,7 @@
     flex-direction: row;
   }
   @include lgMinBreakPoint {
+    padding: 0;
     max-width: #{$lg};
   }
   @include xlMinBreakPoint {

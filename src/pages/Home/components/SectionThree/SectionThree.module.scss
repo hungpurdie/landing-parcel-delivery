@@ -1,0 +1,144 @@
+@import '../../../../styles/mixins';
+
+.wrapper {
+  background-color: var(--primary-background);
+  padding-top: 150px;
+  margin-bottom: 200px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0 50px;
+  padding: 0 20px;
+  @include mdMinBreakPoint {
+    height: 600px;
+    max-width: #{$md};
+    margin: 0 auto;
+    flex-direction: row;
+  }
+  @include lgMinBreakPoint {
+    padding: 0;
+    max-width: #{$lg};
+  }
+  @include xlMinBreakPoint {
+    max-width: #{$xl};
+  }
+}
+
+.left {
+  .heading {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 1.2;
+    max-width: 370px;
+    color: var(--primary-text);
+    @include mdMinBreakPoint {
+      max-width: 570px;
+    }
+  }
+  .text {
+    &-list {
+      margin: 40px 0;
+      list-style-type: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+      grid-gap: 30px;
+      @include mdMinBreakPoint {
+        margin-top: 70px;
+      }
+    }
+    &-item {
+      .title {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--primary-text);
+      }
+      .description {
+        margin-top: 10px;
+        font-size: 18px;
+        color: var(--secondary-text);
+        position: relative;
+        &::before {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 42px;
+          left: -10px;
+          bottom: 5px;
+        }
+      }
+      &:first-child .description::before {
+        background-color: var(--primary-color);
+      }
+      &:nth-child(2) .description::before {
+        background-color: var(--secondary-background);
+      }
+      &:nth-child(3) .description::before {
+        background-color: var(--primary-text);
+      }
+      &:last-child .description::before {
+        background-color: #fcaa0f;
+      }
+    }
+  }
+}
+
+.right {
+  --height: 723px;
+  .background {
+    min-width: 336px;
+    min-height: var(--height);
+    background-color: var(--white-color);
+    box-shadow: 0px 24px 68px rgba(0, 0, 0, 0.07);
+    border-radius: 33px;
+  }
+  .overlay {
+    border-radius: 33px;
+    height: 66.6666%;
+    position: relative;
+    background-color: var(--secondary-background);
+  }
+  .title {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    color: var(--white-color);
+    font-weight: bold;
+  }
+  .bottom {
+    height: 33.3333%;
+    padding: 0 20px;
+  }
+  .title-2 {
+    margin-top: 30px;
+    color: var(--primary-text);
+  }
+}
+
+.card {
+  &-list {
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    max-width: 380px;
+    margin-top: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    @include smMinBreakPoint {
+      min-width: 500px;
+    }
+    @include mdMinBreakPoint {
+      min-width: 340px;
+    }
+    @include xlMinBreakPoint {
+      min-width: 430px;
+    }
+  }
+  &-item {
+    width: 128px;
+    height: 133px;
+    margin-top: 15px;
+  }
+}

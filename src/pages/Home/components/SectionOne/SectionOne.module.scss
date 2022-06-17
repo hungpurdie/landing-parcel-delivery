@@ -10,12 +10,14 @@
 .inner {
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
   @include mdMinBreakPoint {
     max-width: #{$md};
     margin: 0 auto;
   }
   @include lgMinBreakPoint {
     max-width: #{$lg};
+    padding: 0;
   }
   @include xlMinBreakPoint {
     max-width: #{$xl};

@@ -6,12 +6,13 @@
 
 .inner {
   margin: 0 15px;
-  padding: 10px 0;
+  padding: 10px 20px;
   @include mdMinBreakPoint {
     max-width: #{$md};
     margin: 0 auto;
   }
   @include lgMinBreakPoint {
+    padding: 0;
     max-width: #{$lg};
   }
   @include xlMinBreakPoint {
