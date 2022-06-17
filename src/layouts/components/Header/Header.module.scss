@@ -6,6 +6,7 @@
 
 .inner {
   margin: 0 15px;
+  padding: 10px 0;
   @include mdMinBreakPoint {
     max-width: #{$md};
     margin: 0 auto;

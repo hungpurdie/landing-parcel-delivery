@@ -1,0 +1,76 @@
+@import '../../../../styles/mixins';
+
+.wrapper {
+  background-color: var(--background-content);
+  @include mdMinBreakPoint {
+    padding-top: 150px;
+  }
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  @include mdMinBreakPoint {
+    max-width: #{$md};
+    margin: 0 auto;
+  }
+  @include lgMinBreakPoint {
+    max-width: #{$lg};
+  }
+  @include xlMinBreakPoint {
+    max-width: #{$xl};
+  }
+}
+
+.heading {
+  text-align: center;
+  color: var(--primary-text);
+  margin-bottom: 40px;
+}
+
+.card {
+  &-list {
+    --columns: 1;
+    @include mdMinBreakPoint {
+      --columns: 3;
+    }
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+    @include mdMinBreakPoint {
+      flex-direction: row;
+    }
+    .circle {
+      display: none;
+      @include xxlMinBreakPoint {
+        display: flex;
+        min-width: 146px;
+        min-height: 146px;
+      }
+      position: absolute;
+      border-radius: 50%;
+
+      background-color: var(--background-pink);
+      &-top {
+        top: -91px;
+        left: -91px;
+      }
+      &-bottom {
+        right: 0;
+        bottom: 0;
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+  &-item {
+    width: calc((100% / var(--columns)));
+    z-index: 10;
+    padding: 20px;
+    @include mdMinBreakPoint {
+      padding: 10px;
+    }
+  }
+}
