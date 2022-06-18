@@ -1,0 +1,89 @@
+@import '../../../../styles/mixins';
+
+.wrapper {
+  padding-top: 100px;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  border-radius: 12px;
+  background-color: var(--secondary-background);
+  color: var(--white-color);
+  justify-content: space-between;
+  @include mdMinBreakPoint {
+    max-width: #{$md};
+    margin: 0 auto;
+    padding: 100px 50px;
+    flex-direction: row;
+  }
+  @include lgMinBreakPoint {
+    max-width: #{$lg};
+  }
+  @include xlMinBreakPoint {
+    max-width: #{$xl};
+  }
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 275px;
+  margin-bottom: 20px;
+
+  @include mdMinBreakPoint {
+    margin-bottom: 0;
+  }
+  .avatar {
+    flex-shrink: 0;
+  }
+
+  .text {
+    flex: 1;
+    margin-left: 15px;
+  }
+
+  .sub-title {
+    font-size: 14px;
+  }
+}
+
+.right {
+  max-width: 570px;
+  flex-grow: 1;
+  blockquote {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.4;
+    position: relative;
+    padding: 1rem;
+  }
+
+  blockquote:before,
+  blockquote:after {
+    position: absolute;
+    color: #f1efe6;
+    font-size: 8rem;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  blockquote:before {
+    content: '“';
+    left: -4rem;
+    top: -2rem;
+  }
+
+  blockquote:after {
+    content: '”';
+    bottom: 3rem;
+  }
+
+  cite {
+    line-height: 3;
+    text-align: left;
+  }
+}
